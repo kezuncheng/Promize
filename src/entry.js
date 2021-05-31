@@ -2,7 +2,7 @@ const Promize = require('./promize')
 
 module.exports = {
   resolved: Promize.resolve,
-  rejected: Promize.rejected,
+  rejected: Promize.reject,
   deferred: function() {
     let resolve
     let reject
