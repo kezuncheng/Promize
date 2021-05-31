@@ -74,7 +74,6 @@ class Promize {
 			}
 			if (res === ret) return _reject(new TypeError('cannot return same promise'))
 			res instanceof Promize ? res.then(_resolve, _reject) : _resolve(res)
-			// TODO 当 fullFill 不是函数的时候，直接忽略掉，传递下去，下同
 		} : _resolve
 
 		const rejected = typeof rejectFn === 'function' ? function(reason) {
